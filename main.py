@@ -1,10 +1,11 @@
 class Data:
 
-    def writeData(self, website, emailOrUsername, password):
+    def __init__(self, website, emailOrUsername, password):
         self.website = website
         self.emailOrUsername = emailOrUsername
         self.password = password
 
+    def writeData(self):
         file = open('data.txt', 'a')
         file.write("WEBSITE: {} | EMAIL/USERNAME: {} | PASSWORD: {}\n".format(self.website, self.emailOrUsername, self.password))
         print("Data has added successfully!".upper())
@@ -27,10 +28,10 @@ class Data:
         updatedFile = open('data.txt', 'w+')
         for line in lines:
             updatedFile.write(line)
+        file.close()
 
         print("Entry has deleted successfully".upper())
 
-user = Data()
-user.writeData("GitHub", "TestUsername", "TestUserPW")
+user = Data("GitHub", "TestUsername", "TestUserPW")
+user.writeData()
 user.deleteData(1)
-
