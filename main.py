@@ -32,6 +32,17 @@ class Data:
 
         print("Entry has deleted successfully".upper())
 
+    def deleteAll(self, userConfirm):
+
+        if userConfirm == 'yes':
+            file = open('data.txt', 'r+')
+            file.truncate(0)
+            print("Everything has deleted!".upper())
+            file.close()
+        elif userConfirm == 'no':
+            print("Deletion has cancelled!".upper())
+
 user = Data("GitHub", "TestUsername", "TestUserPW")
 user.writeData()
 user.deleteData(1)
+user.deleteAll('yes')
