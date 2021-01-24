@@ -18,7 +18,6 @@ class Data:
             print(line)
 
     def deleteData(self, whichLine):
-        self.whichLine = whichLine
 
         file = open('data.txt', 'r')
         lines = file.readlines()
