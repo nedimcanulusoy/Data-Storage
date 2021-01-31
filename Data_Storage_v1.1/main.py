@@ -5,6 +5,8 @@ import tkinter.messagebox
 window = Tk()
 window.withdraw()
 window.title("Data Storage v1.1")
+img = PhotoImage(file='logo.xbm')
+window.tk.call('wm', 'iconphoto', window._w, img)
 storage = []
 
 class loginPopup:
@@ -15,6 +17,8 @@ class loginPopup:
     def __init__(self, master):
         top = self.top = Toplevel(master)
         top.title('LOGIN')
+        img = PhotoImage(file='logo.xbm')
+        top.tk.call('wm', 'iconphoto', top._w, img)
         top.geometry('{}x{}'.format(250, 200))
         top.resizable(width=False, height=False)
 
