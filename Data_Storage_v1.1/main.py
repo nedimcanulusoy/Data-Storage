@@ -16,7 +16,7 @@ class loginPopup:
 
     def __init__(self, master):
         top = self.top = Toplevel(master)
-        top.title('LOGIN')
+        top.title("Data Storage v1.1")
         img = PhotoImage(file='logo.xbm')
         top.tk.call('wm', 'iconphoto', top._w, img)
         top.geometry('{}x{}'.format(250, 200))
