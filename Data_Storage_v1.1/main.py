@@ -15,8 +15,13 @@ class loginPopup:
     def __init__(self, master):
         top = self.top = Toplevel(master)
         top.title('LOGIN')
-        top.geometry('{}x{}'.format(250, 100))
+        top.geometry('{}x{}'.format(250, 200))
         top.resizable(width=False, height=False)
+
+        self.label_user = Label(top, text='Enter Your Username', font = ('Roboto', 12), justify=CENTER, fg="cadetblue4")
+        self.label_user.pack()
+        self.entry_user = Entry(top, width=30, fg="cadetblue4")
+        self.entry_user.pack(pady=7)
 
         self.label_passw = Label(top, text='Enter Your Password', font = ('Roboto', 12), justify=CENTER, fg="cadetblue4")
         self.label_passw.pack()
@@ -27,11 +32,13 @@ class loginPopup:
         self.btn.pack()
 
     def login(self):
+        self.user_value = self.entry_user.get()
         self.passw_value = self.entry_passw.get()
 
+        user_access = 'nedim'
         passw_access = 'admin'
 
-        if self.passw_value == passw_access:
+        if self.user_value == user_access and self.passw_value == passw_access:
             self.key = True
             self.top.destroy()
             window.deiconify()
