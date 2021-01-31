@@ -99,7 +99,7 @@ class DataDisplay:
             lines = file.readlines()
             file.close()
 
-            file = open('data.txt', "r")
+            file = open('data.txt', "w")
             count = 0
 
             for line in lines:
