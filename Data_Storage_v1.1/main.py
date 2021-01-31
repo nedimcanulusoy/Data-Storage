@@ -95,20 +95,20 @@ class DataDisplay:
             for i in storage:
                 i.destroy()
 
-            file = open('data.txt', "r")
-            lines = file.readlines()
-            file.close()
+        file = open('data.txt', "r")
+        lines = file.readlines()
+        file.close()
 
-            file = open('data.txt', "w")
-            count = 0
+        file = open('data.txt', "w")
+        count = 0
 
-            for line in lines:
-                if count != self.i:
-                    file.write(line)
-                    count += 1
+        for line in lines:
+            if count != self.i:
+                file.write(line)
+                count += 1
 
-            file.close()
-            getData()
+        file.close()
+        getData()
 
     def destroy(self):
         self.label_websiteDisplay.destroy()
