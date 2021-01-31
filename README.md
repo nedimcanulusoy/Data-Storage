@@ -4,3 +4,5 @@
 ***Version 1.0*** allows you storing your data in txt file but soon it will have upgraded to sqlite3 and it will have GUI support. 
 
 ***Version 1.1*** supports Tkinter GUI, thus make your usage more easier.
+
+***Version 1.2*** supports storing data at SQLite3 database and guide you with Tkinter GUI, thus make your usage easier.
