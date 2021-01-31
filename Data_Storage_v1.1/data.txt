@@ -1,1 +1,2 @@
-testPlatform,testuser@testmail.com,testUserPassword,
+testuser.com,myusername,mypassword, 
+userwebsite.com,iamuser,thisismypassword, 
