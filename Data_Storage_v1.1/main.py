@@ -19,17 +19,17 @@ class loginPopup:
         top.resizable(width=False, height=False)
 
         self.label_user = Label(top, text='Enter Your Username', font = ('Roboto', 12), justify=CENTER, fg="cadetblue4")
-        self.label_user.pack()
+        self.label_user.pack(pady=(15, 0))
         self.entry_user = Entry(top, width=30, fg="cadetblue4")
-        self.entry_user.pack(pady=7)
+        self.entry_user.pack(pady=(10, 0))
 
         self.label_passw = Label(top, text='Enter Your Password', font = ('Roboto', 12), justify=CENTER, fg="cadetblue4")
-        self.label_passw.pack()
+        self.label_passw.pack(pady=(15, 0))
         self.entry_passw = Entry(top, show='*', width=30, fg="cadetblue4")
-        self.entry_passw.pack(pady=7)
+        self.entry_passw.pack(pady=(10, 0))
 
         self.btn = Button(top, text='Submit', font = ('Roboto', 14), command=self.login, fg="cadetblue4")
-        self.btn.pack()
+        self.btn.pack(pady=(15, 0))
 
     def login(self):
         self.user_value = self.entry_user.get()
