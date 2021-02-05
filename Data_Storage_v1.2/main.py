@@ -9,7 +9,7 @@ window.title("Data Storage v1.2")
 img = PhotoImage(file='logo.xbm')
 window.tk.call('wm', 'iconphoto', window._w, img)
 
-class loginPopup:
+class loginPopup(object):
 
     key = False
     attemptChange = 5
